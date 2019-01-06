@@ -1,5 +1,5 @@
 
-// line 1 "atoi.rl"
+//line atoi/atoi.rl:1
 package atoi
 
 import (
@@ -7,7 +7,7 @@ import (
 )
 
 
-// line 11 "atoi.go"
+//line atoi/atoi.go:11
 const atoi_start int = 1
 const atoi_first_final int = 3
 const atoi_error int = 0
@@ -15,7 +15,7 @@ const atoi_error int = 0
 const atoi_en_main int = 1
 
 
-// line 10 "atoi.rl"
+//line atoi/atoi.rl:10
 
 
 func Atoi(data string) (int64, error) {
@@ -23,12 +23,12 @@ func Atoi(data string) (int64, error) {
   var neg bool
   var val int64
   
-// line 27 "atoi.go"
+//line atoi/atoi.go:27
 	{
 	cs = atoi_start
 	}
 
-// line 32 "atoi.go"
+//line atoi/atoi.go:32
 	{
 	if p == pe {
 		goto _test_eof
@@ -62,8 +62,7 @@ st_case_0:
 		cs = 0
 		goto _out
 tr2:
-// line 17 "atoi.rl"
-
+//line atoi/atoi.rl:17
  neg = true 
 	goto st2
 	st2:
@@ -71,14 +70,13 @@ tr2:
 			goto _test_eof2
 		}
 	st_case_2:
-// line 75 "atoi.go"
+//line atoi/atoi.go:74
 		if 48 <= data[p] && data[p] <= 57 {
 			goto tr3
 		}
 		goto st0
 tr3:
-// line 18 "atoi.rl"
-
+//line atoi/atoi.rl:18
  val = val * 10 + (int64(data[p]) - '0') 
 	goto st3
 	st3:
@@ -86,7 +84,7 @@ tr3:
 			goto _test_eof3
 		}
 	st_case_3:
-// line 90 "atoi.go"
+//line atoi/atoi.go:88
 		if data[p] == 10 {
 			goto st4
 		}
@@ -109,7 +107,7 @@ tr3:
 	_out: {}
 	}
 
-// line 24 "atoi.rl"
+//line atoi/atoi.rl:24
 
 
   if neg {

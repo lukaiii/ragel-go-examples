@@ -7,6 +7,8 @@ import (
 func TestAtoi(t *testing.T) {
 	for _, test := range atoiTests {
 		v, e := Atoi(test.Data)
+        // t.Error(v, e)
+        t.Log(v, e)
 		if e != nil && !test.Errors {
 			t.Fatalf("Errored on %s", test.Data)
 		}
@@ -31,3 +33,11 @@ var atoiTests = []atoiTest{
 	atoiTest{"+1234567890\n", 1234567890, false},
 	atoiTest{"+ 1234567890", 0, true},
 }
+
+/*
+func main() {
+    for _, c := range atoiTests {
+        Test
+    }
+}
+*/
